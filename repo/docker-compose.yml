@@ -1,0 +1,8 @@
+services:
+  ios-project-info:
+    image: alpine:3.20
+    container_name: chargeprocure-ios-info
+    command: >
+      sh -c "echo 'ChargeProcure is a native iOS/Xcode project.
+      Build and test on macOS with Xcode; Docker is informational only.' &&
+      tail -f /dev/null"
