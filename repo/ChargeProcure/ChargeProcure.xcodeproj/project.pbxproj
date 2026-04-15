@@ -1,0 +1,1236 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		142658305253A75EA447C7F9 /* CPSecurityRegressionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94715CB11024273DE94AA1A1 /* CPSecurityRegressionTests.m */; };
+		43BEF5544C8E85B3BB911FFA /* CPCouponService.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE18F1B66050A56466638A /* CPCouponService.m */; };
+		4506DF02F03ABA4845871A7E /* CPBulletinEditorRichTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E29E35E054E8F869246F5 /* CPBulletinEditorRichTextTests.m */; };
+		68A77229564A172C40A24CDB /* CPUISecurityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B52EC563B1B56A7F96954F76 /* CPUISecurityTests.m */; };
+		8FCD2CFACF4849232A5193B9 /* CPCouponServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B0EB172F8175F2E7ED5BE /* CPCouponServiceTests.m */; };
+		AA000001000000000000001B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000001A /* AppDelegate.m */; };
+		AA000002000000000000001B /* CPCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000002000000000000001A /* CPCoreDataStack.m */; };
+		AA000003000000000000001B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA000003000000000000001A /* Model.xcdatamodeld */; };
+		AA000004000000000000001B /* CPUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000004000000000000001A /* CPUser+CoreDataClass.m */; };
+		AA000005000000000000001B /* CPUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000005000000000000001A /* CPUser+CoreDataProperties.m */; };
+		AA000006000000000000001B /* CPCharger+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000006000000000000001A /* CPCharger+CoreDataClass.m */; };
+		AA000007000000000000001B /* CPCharger+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000007000000000000001A /* CPCharger+CoreDataProperties.m */; };
+		AA000008000000000000001B /* CPBulletin+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000008000000000000001A /* CPBulletin+CoreDataClass.m */; };
+		AA000009000000000000001B /* CPBulletin+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000009000000000000001A /* CPBulletin+CoreDataProperties.m */; };
+		AA00000A000000000000001B /* CPProcurementCase+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00000A000000000000001A /* CPProcurementCase+CoreDataClass.m */; };
+		AA00000B000000000000001B /* CPProcurementCase+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00000B000000000000001A /* CPProcurementCase+CoreDataProperties.m */; };
+		AA00000C000000000000001B /* CPInvoice+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00000C000000000000001A /* CPInvoice+CoreDataClass.m */; };
+		AA00000D000000000000001B /* CPInvoice+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00000D000000000000001A /* CPInvoice+CoreDataProperties.m */; };
+		AA00000E000000000000001B /* CPPricingRule+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00000E000000000000001A /* CPPricingRule+CoreDataClass.m */; };
+		AA00000F000000000000001B /* CPPricingRule+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00000F000000000000001A /* CPPricingRule+CoreDataProperties.m */; };
+		AA000010000000000000001B /* CPVendor+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000010000000000000001A /* CPVendor+CoreDataClass.m */; };
+		AA000011000000000000001B /* CPVendor+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000011000000000000001A /* CPVendor+CoreDataProperties.m */; };
+		AA000012000000000000001B /* CPCommand+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000012000000000000001A /* CPCommand+CoreDataClass.m */; };
+		AA000013000000000000001B /* CPCommand+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000013000000000000001A /* CPCommand+CoreDataProperties.m */; };
+		AA000014000000000000001B /* CPAttachment+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000014000000000000001A /* CPAttachment+CoreDataClass.m */; };
+		AA000015000000000000001B /* CPAttachment+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000015000000000000001A /* CPAttachment+CoreDataProperties.m */; };
+		AA000016000000000000001B /* CPAuditEvent+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000016000000000000001A /* CPAuditEvent+CoreDataClass.m */; };
+		AA000017000000000000001B /* CPAuditEvent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000017000000000000001A /* CPAuditEvent+CoreDataProperties.m */; };
+		AA000018000000000000001B /* CPChargerEvent+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000018000000000000001A /* CPChargerEvent+CoreDataClass.m */; };
+		AA000019000000000000001B /* CPChargerEvent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000019000000000000001A /* CPChargerEvent+CoreDataProperties.m */; };
+		AA00001A000000000000001B /* CPBulletinVersion+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00001A000000000000001A /* CPBulletinVersion+CoreDataClass.m */; };
+		AA00001B000000000000001B /* CPBulletinVersion+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00001B000000000000001A /* CPBulletinVersion+CoreDataProperties.m */; };
+		AA00001C000000000000001B /* CPAuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00001C000000000000001A /* CPAuthService.m */; };
+		AA00001D000000000000001B /* CPAuditService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00001D000000000000001A /* CPAuditService.m */; };
+		AA00001E000000000000001B /* CPRBACService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00001E000000000000001A /* CPRBACService.m */; };
+		AA00001F000000000000001B /* CPChargerService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00001F000000000000001A /* CPChargerService.m */; };
+		AA000020000000000000001B /* CPProcurementService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000020000000000000001A /* CPProcurementService.m */; };
+		AA000021000000000000001B /* CPBulletinService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000021000000000000001A /* CPBulletinService.m */; };
+		AA000022000000000000001B /* CPPricingService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000022000000000000001A /* CPPricingService.m */; };
+		AA000023000000000000001B /* CPAnalyticsService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000023000000000000001A /* CPAnalyticsService.m */; };
+		AA000024000000000000001B /* CPExportService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000024000000000000001A /* CPExportService.m */; };
+		AA000025000000000000001B /* CPAttachmentService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000025000000000000001A /* CPAttachmentService.m */; };
+		AA000026000000000000001B /* CPIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000026000000000000001A /* CPIDGenerator.m */; };
+		AA000027000000000000001B /* CPFileValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000027000000000000001A /* CPFileValidator.m */; };
+		AA000028000000000000001B /* CPImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000028000000000000001A /* CPImageCache.m */; };
+		AA000029000000000000001B /* CPDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000029000000000000001A /* CPDateFormatter.m */; };
+		AA00002A000000000000001B /* CPNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00002A000000000000001A /* CPNumberFormatter.m */; };
+		AA00002B000000000000001B /* CPBackgroundTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00002B000000000000001A /* CPBackgroundTaskManager.m */; };
+		AA00002C000000000000001B /* CPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00002C000000000000001A /* CPTabBarController.m */; };
+		AA00002D000000000000001B /* CPSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00002D000000000000001A /* CPSplitViewController.m */; };
+		AA00002E000000000000001B /* CPSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00002E000000000000001A /* CPSidebarViewController.m */; };
+		AA00002F000000000000001B /* CPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00002F000000000000001A /* CPLoginViewController.m */; };
+		AA000030000000000000001B /* CPDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000030000000000000001A /* CPDashboardViewController.m */; };
+		AA000031000000000000001B /* CPChargerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000031000000000000001A /* CPChargerListViewController.m */; };
+		AA000032000000000000001B /* CPChargerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000032000000000000001A /* CPChargerDetailViewController.m */; };
+		AA000033000000000000001B /* CPProcurementListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000033000000000000001A /* CPProcurementListViewController.m */; };
+		AA000034000000000000001B /* CPProcurementCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000034000000000000001A /* CPProcurementCaseViewController.m */; };
+		AA000035000000000000001B /* CPInvoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000035000000000000001A /* CPInvoiceViewController.m */; };
+		AA000036000000000000001B /* CPBulletinListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000036000000000000001A /* CPBulletinListViewController.m */; };
+		AA000037000000000000001B /* CPBulletinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000037000000000000001A /* CPBulletinDetailViewController.m */; };
+		AA000038000000000000001B /* CPBulletinEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000038000000000000001A /* CPBulletinEditorViewController.m */; };
+		AA000039000000000000001B /* CPPricingRuleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000039000000000000001A /* CPPricingRuleListViewController.m */; };
+		AA00003A000000000000001B /* CPPricingRuleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00003A000000000000001A /* CPPricingRuleDetailViewController.m */; };
+		AA00003B000000000000001B /* CPAnalyticsDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00003B000000000000001A /* CPAnalyticsDashboardViewController.m */; };
+		AA00003C000000000000001B /* CPUserManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00003C000000000000001A /* CPUserManagementViewController.m */; };
+		AA00003D000000000000001B /* CPAuditLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00003D000000000000001A /* CPAuditLogViewController.m */; };
+		AA00003E000000000000001B /* CPVendorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00003E000000000000001A /* CPVendorListViewController.m */; };
+		AA00003F000000000000001B /* CPVendorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00003F000000000000001A /* CPVendorDetailViewController.m */; };
+		AA000040000000000000001B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA000040000000000000001A /* LaunchScreen.storyboard */; };
+		AA000042000000000000001B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000042000000000000001A /* Foundation.framework */; };
+		AA000043000000000000001B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000043000000000000001A /* UIKit.framework */; };
+		AA000044000000000000001B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000044000000000000001A /* CoreData.framework */; };
+		AA000045000000000000001B /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000045000000000000001A /* LocalAuthentication.framework */; };
+		AA000046000000000000001B /* BackgroundTasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000046000000000000001A /* BackgroundTasks.framework */; };
+		AA000047000000000000001B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000047000000000000001A /* main.m */; };
+		AA000048000000000000001B /* CPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000048000000000000001A /* CPSessionManager.m */; };
+		AA000049000000000000001B /* CPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000049000000000000001A /* CPSettingsViewController.m */; };
+		AA00004A000000000000001B /* CPVendorStatementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00004A000000000000001A /* CPVendorStatementViewController.m */; };
+		AA00004B000000000000001B /* CPChargerSimulatorAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00004B000000000000001A /* CPChargerSimulatorAdapter.m */; };
+		AA00004C000000000000001B /* CPWriteOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00004C000000000000001A /* CPWriteOffViewController.m */; };
+		AA00004D000000000000001B /* CPReportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00004D000000000000001A /* CPReportsViewController.m */; };
+		AA00004E000000000000001B /* CPRolesPermissionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00004E000000000000001A /* CPRolesPermissionsViewController.m */; };
+		BB000001000000000000001B /* CPTestCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000001A /* CPTestCoreDataStack.m */; };
+		BB000002000000000000001B /* CPTestDataFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000002000000000000001A /* CPTestDataFactory.m */; };
+		BB000003000000000000001B /* CPAuthServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000003000000000000001A /* CPAuthServiceTests.m */; };
+		BB000004000000000000001B /* CPProcurementServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000004000000000000001A /* CPProcurementServiceTests.m */; };
+		BB000005000000000000001B /* CPChargerServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000005000000000000001A /* CPChargerServiceTests.m */; };
+		BB000006000000000000001B /* CPBulletinServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000006000000000000001A /* CPBulletinServiceTests.m */; };
+		BB000007000000000000001B /* CPPricingServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000007000000000000001A /* CPPricingServiceTests.m */; };
+		BB000008000000000000001B /* CPAnalyticsServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000008000000000000001A /* CPAnalyticsServiceTests.m */; };
+		BB000009000000000000001B /* CPAttachmentServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000009000000000000001A /* CPAttachmentServiceTests.m */; };
+		BB00000A000000000000001B /* CPRBACServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB00000A000000000000001A /* CPRBACServiceTests.m */; };
+		BB00000B000000000000001B /* CPNavigationAndContractTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB00000B000000000000001A /* CPNavigationAndContractTests.m */; };
+		C22337C74AC0994C102BFB46 /* CPCouponPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9422C043FEAE9EBFF8818D3 /* CPCouponPackageListViewController.m */; };
+		DBBC5EAC2520567C4AB7C4C4 /* CPDepositListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A8D3B9BEC1BC219201BB95 /* CPDepositListViewController.m */; };
+		E69F507B21C6880D180AD474 /* CPDepositService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAFB478100F77F0C3BFAA61 /* CPDepositService.m */; };
+		F938968EB153AEF78D19FB7E /* CPDepositServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1347D59D98688D3DAE58A0AE /* CPDepositServiceTests.m */; };
+		CC001111222233334444AAAB /* CPExportServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC001111222233334444AAAA /* CPExportServiceTests.m */; };
+		BB00000C000000000000001B /* CPVCInteractionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB00000C000000000000001A /* CPVCInteractionTests.m */; };
+		BB000030000000000000001B /* CPE2ELoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000030000000000000001A /* CPE2ELoginTests.m */; };
+		BB000031000000000000001B /* CPE2ENavigationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB000031000000000000001A /* CPE2ENavigationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE000013000000000000001A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF000001000000000000001A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE000001000000000000001A;
+			remoteInfo = ChargeProcure;
+		};
+		EE000025000000000000001A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF000001000000000000001A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE000001000000000000001A;
+			remoteInfo = ChargeProcure;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1347D59D98688D3DAE58A0AE /* CPDepositServiceTests.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CPDepositServiceTests.m; sourceTree = "<group>"; };
+		142E172BDFD59E74C2442A59 /* CPDepositListViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPDepositListViewController.h; path = Finance/CPDepositListViewController.h; sourceTree = "<group>"; };
+		5D9B0EB172F8175F2E7ED5BE /* CPCouponServiceTests.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CPCouponServiceTests.m; sourceTree = "<group>"; };
+		6AAFB478100F77F0C3BFAA61 /* CPDepositService.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CPDepositService.m; sourceTree = "<group>"; };
+		7B62BACE2DD9637AFCBB3381 /* CPDepositService.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CPDepositService.h; sourceTree = "<group>"; };
+		86A8D3B9BEC1BC219201BB95 /* CPDepositListViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPDepositListViewController.m; path = Finance/CPDepositListViewController.m; sourceTree = "<group>"; };
+		8C4B0617AA79B74CDE209904 /* CPCouponService.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CPCouponService.h; sourceTree = "<group>"; };
+		94715CB11024273DE94AA1A1 /* CPSecurityRegressionTests.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CPSecurityRegressionTests.m; sourceTree = "<group>"; };
+		AA000000000000000000001A /* ChargeProcure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChargeProcure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA000000100000000000001A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AA000001000000000000001A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AA000001100000000000001A /* CPCoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPCoreDataStack.h; sourceTree = "<group>"; };
+		AA000002000000000000001A /* CPCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPCoreDataStack.m; sourceTree = "<group>"; };
+		AA000003000000000000001A /* Model.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodeld; sourceTree = "<group>"; };
+		AA000003100000000000001A /* CPUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA000004000000000000001A /* CPUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA000004100000000000001A /* CPUser+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA000005000000000000001A /* CPUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA000005100000000000001A /* CPCharger+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPCharger+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA000006000000000000001A /* CPCharger+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPCharger+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA000006100000000000001A /* CPCharger+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPCharger+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA000007000000000000001A /* CPCharger+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPCharger+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA000007100000000000001A /* CPBulletin+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPBulletin+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA000008000000000000001A /* CPBulletin+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPBulletin+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA000008100000000000001A /* CPBulletin+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPBulletin+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA000009000000000000001A /* CPBulletin+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPBulletin+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA000009100000000000001A /* CPProcurementCase+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPProcurementCase+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA00000A000000000000001A /* CPProcurementCase+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPProcurementCase+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA00000A100000000000001A /* CPProcurementCase+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPProcurementCase+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA00000B000000000000001A /* CPProcurementCase+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPProcurementCase+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA00000B100000000000001A /* CPInvoice+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPInvoice+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA00000C000000000000001A /* CPInvoice+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPInvoice+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA00000C100000000000001A /* CPInvoice+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPInvoice+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA00000D000000000000001A /* CPInvoice+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPInvoice+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA00000D100000000000001A /* CPPricingRule+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPPricingRule+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA00000E000000000000001A /* CPPricingRule+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPPricingRule+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA00000E100000000000001A /* CPPricingRule+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPPricingRule+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA00000F000000000000001A /* CPPricingRule+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPPricingRule+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA00000F100000000000001A /* CPVendor+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPVendor+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA000010000000000000001A /* CPVendor+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPVendor+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA000010100000000000001A /* CPVendor+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPVendor+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA000011000000000000001A /* CPVendor+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPVendor+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA000011100000000000001A /* CPCommand+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPCommand+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA000012000000000000001A /* CPCommand+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPCommand+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA000012100000000000001A /* CPCommand+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPCommand+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA000013000000000000001A /* CPCommand+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPCommand+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA000013100000000000001A /* CPAttachment+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPAttachment+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA000014000000000000001A /* CPAttachment+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPAttachment+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA000014100000000000001A /* CPAttachment+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPAttachment+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA000015000000000000001A /* CPAttachment+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPAttachment+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA000015100000000000001A /* CPAuditEvent+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPAuditEvent+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA000016000000000000001A /* CPAuditEvent+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPAuditEvent+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA000016100000000000001A /* CPAuditEvent+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPAuditEvent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA000017000000000000001A /* CPAuditEvent+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPAuditEvent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA000017100000000000001A /* CPChargerEvent+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPChargerEvent+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA000018000000000000001A /* CPChargerEvent+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPChargerEvent+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA000018100000000000001A /* CPChargerEvent+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPChargerEvent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA000019000000000000001A /* CPChargerEvent+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPChargerEvent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA000019100000000000001A /* CPBulletinVersion+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPBulletinVersion+CoreDataClass.h"; sourceTree = "<group>"; };
+		AA00001A000000000000001A /* CPBulletinVersion+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPBulletinVersion+CoreDataClass.m"; sourceTree = "<group>"; };
+		AA00001A100000000000001A /* CPBulletinVersion+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPBulletinVersion+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA00001B000000000000001A /* CPBulletinVersion+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPBulletinVersion+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA00001B100000000000001A /* CPAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAuthService.h; sourceTree = "<group>"; };
+		AA00001C000000000000001A /* CPAuthService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAuthService.m; sourceTree = "<group>"; };
+		AA00001C100000000000001A /* CPAuditService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAuditService.h; sourceTree = "<group>"; };
+		AA00001D000000000000001A /* CPAuditService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAuditService.m; sourceTree = "<group>"; };
+		AA00001D100000000000001A /* CPRBACService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPRBACService.h; sourceTree = "<group>"; };
+		AA00001E000000000000001A /* CPRBACService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPRBACService.m; sourceTree = "<group>"; };
+		AA00001E100000000000001A /* CPChargerService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPChargerService.h; sourceTree = "<group>"; };
+		AA00001F000000000000001A /* CPChargerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPChargerService.m; sourceTree = "<group>"; };
+		AA00001F100000000000001A /* CPProcurementService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPProcurementService.h; sourceTree = "<group>"; };
+		AA000020000000000000001A /* CPProcurementService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPProcurementService.m; sourceTree = "<group>"; };
+		AA000020100000000000001A /* CPBulletinService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPBulletinService.h; sourceTree = "<group>"; };
+		AA000021000000000000001A /* CPBulletinService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPBulletinService.m; sourceTree = "<group>"; };
+		AA000021100000000000001A /* CPPricingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPricingService.h; sourceTree = "<group>"; };
+		AA000022000000000000001A /* CPPricingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPPricingService.m; sourceTree = "<group>"; };
+		AA000022100000000000001A /* CPAnalyticsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAnalyticsService.h; sourceTree = "<group>"; };
+		AA000023000000000000001A /* CPAnalyticsService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAnalyticsService.m; sourceTree = "<group>"; };
+		AA000023100000000000001A /* CPExportService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPExportService.h; sourceTree = "<group>"; };
+		AA000024000000000000001A /* CPExportService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPExportService.m; sourceTree = "<group>"; };
+		AA000024100000000000001A /* CPAttachmentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAttachmentService.h; sourceTree = "<group>"; };
+		AA000025000000000000001A /* CPAttachmentService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAttachmentService.m; sourceTree = "<group>"; };
+		AA000025100000000000001A /* CPIDGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPIDGenerator.h; sourceTree = "<group>"; };
+		AA000026000000000000001A /* CPIDGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPIDGenerator.m; sourceTree = "<group>"; };
+		AA000026100000000000001A /* CPFileValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPFileValidator.h; sourceTree = "<group>"; };
+		AA000027000000000000001A /* CPFileValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPFileValidator.m; sourceTree = "<group>"; };
+		AA000027100000000000001A /* CPImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPImageCache.h; sourceTree = "<group>"; };
+		AA000028000000000000001A /* CPImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPImageCache.m; sourceTree = "<group>"; };
+		AA000028100000000000001A /* CPDateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPDateFormatter.h; sourceTree = "<group>"; };
+		AA000029000000000000001A /* CPDateFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPDateFormatter.m; sourceTree = "<group>"; };
+		AA000029100000000000001A /* CPNumberFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPNumberFormatter.h; sourceTree = "<group>"; };
+		AA00002A000000000000001A /* CPNumberFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPNumberFormatter.m; sourceTree = "<group>"; };
+		AA00002A100000000000001A /* CPBackgroundTaskManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPBackgroundTaskManager.h; sourceTree = "<group>"; };
+		AA00002B000000000000001A /* CPBackgroundTaskManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPBackgroundTaskManager.m; sourceTree = "<group>"; };
+		AA00002B100000000000001A /* CPTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPTabBarController.h; sourceTree = "<group>"; };
+		AA00002C000000000000001A /* CPTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPTabBarController.m; sourceTree = "<group>"; };
+		AA00002C100000000000001A /* CPSplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPSplitViewController.h; sourceTree = "<group>"; };
+		AA00002D000000000000001A /* CPSplitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPSplitViewController.m; sourceTree = "<group>"; };
+		AA00002D100000000000001A /* CPSidebarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPSidebarViewController.h; sourceTree = "<group>"; };
+		AA00002E000000000000001A /* CPSidebarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPSidebarViewController.m; sourceTree = "<group>"; };
+		AA00002E100000000000001A /* CPLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPLoginViewController.h; sourceTree = "<group>"; };
+		AA00002F000000000000001A /* CPLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPLoginViewController.m; sourceTree = "<group>"; };
+		AA00002F100000000000001A /* CPDashboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPDashboardViewController.h; sourceTree = "<group>"; };
+		AA000030000000000000001A /* CPDashboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPDashboardViewController.m; sourceTree = "<group>"; };
+		AA000030100000000000001A /* CPChargerListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPChargerListViewController.h; sourceTree = "<group>"; };
+		AA000031000000000000001A /* CPChargerListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPChargerListViewController.m; sourceTree = "<group>"; };
+		AA000031100000000000001A /* CPChargerDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPChargerDetailViewController.h; sourceTree = "<group>"; };
+		AA000032000000000000001A /* CPChargerDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPChargerDetailViewController.m; sourceTree = "<group>"; };
+		AA000032100000000000001A /* CPProcurementListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPProcurementListViewController.h; sourceTree = "<group>"; };
+		AA000033000000000000001A /* CPProcurementListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPProcurementListViewController.m; sourceTree = "<group>"; };
+		AA000033100000000000001A /* CPProcurementCaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPProcurementCaseViewController.h; sourceTree = "<group>"; };
+		AA000034000000000000001A /* CPProcurementCaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPProcurementCaseViewController.m; sourceTree = "<group>"; };
+		AA000034100000000000001A /* CPInvoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPInvoiceViewController.h; sourceTree = "<group>"; };
+		AA000035000000000000001A /* CPInvoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPInvoiceViewController.m; sourceTree = "<group>"; };
+		AA000035100000000000001A /* CPBulletinListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPBulletinListViewController.h; sourceTree = "<group>"; };
+		AA000036000000000000001A /* CPBulletinListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPBulletinListViewController.m; sourceTree = "<group>"; };
+		AA000036100000000000001A /* CPBulletinDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPBulletinDetailViewController.h; sourceTree = "<group>"; };
+		AA000037000000000000001A /* CPBulletinDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPBulletinDetailViewController.m; sourceTree = "<group>"; };
+		AA000037100000000000001A /* CPBulletinEditorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPBulletinEditorViewController.h; sourceTree = "<group>"; };
+		AA000038000000000000001A /* CPBulletinEditorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPBulletinEditorViewController.m; sourceTree = "<group>"; };
+		AA000038100000000000001A /* CPPricingRuleListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPricingRuleListViewController.h; sourceTree = "<group>"; };
+		AA000039000000000000001A /* CPPricingRuleListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPPricingRuleListViewController.m; sourceTree = "<group>"; };
+		AA000039100000000000001A /* CPPricingRuleDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPricingRuleDetailViewController.h; sourceTree = "<group>"; };
+		AA00003A000000000000001A /* CPPricingRuleDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPPricingRuleDetailViewController.m; sourceTree = "<group>"; };
+		AA00003A100000000000001A /* CPAnalyticsDashboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAnalyticsDashboardViewController.h; sourceTree = "<group>"; };
+		AA00003B000000000000001A /* CPAnalyticsDashboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAnalyticsDashboardViewController.m; sourceTree = "<group>"; };
+		AA00003B100000000000001A /* CPUserManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPUserManagementViewController.h; sourceTree = "<group>"; };
+		AA00003C000000000000001A /* CPUserManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPUserManagementViewController.m; sourceTree = "<group>"; };
+		AA00003C100000000000001A /* CPAuditLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAuditLogViewController.h; sourceTree = "<group>"; };
+		AA00003D000000000000001A /* CPAuditLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAuditLogViewController.m; sourceTree = "<group>"; };
+		AA00003D100000000000001A /* CPVendorListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPVendorListViewController.h; sourceTree = "<group>"; };
+		AA00003E000000000000001A /* CPVendorListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPVendorListViewController.m; sourceTree = "<group>"; };
+		AA00003E100000000000001A /* CPVendorDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPVendorDetailViewController.h; sourceTree = "<group>"; };
+		AA00003F000000000000001A /* CPVendorDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPVendorDetailViewController.m; sourceTree = "<group>"; };
+		AA000040000000000000001A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA000041000000000000001A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA000042000000000000001A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AA000043000000000000001A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AA000044000000000000001A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AA000045000000000000001A /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		AA000046000000000000001A /* BackgroundTasks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BackgroundTasks.framework; path = System/Library/Frameworks/BackgroundTasks.framework; sourceTree = SDKROOT; };
+		AA000047000000000000001A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA000048000000000000001A /* CPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPSessionManager.m; sourceTree = "<group>"; };
+		AA000048100000000000001A /* CPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPSessionManager.h; sourceTree = "<group>"; };
+		AA000049000000000000001A /* CPSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPSettingsViewController.m; sourceTree = "<group>"; };
+		AA000049100000000000001A /* CPSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPSettingsViewController.h; sourceTree = "<group>"; };
+		AA00004A000000000000001A /* CPVendorStatementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPVendorStatementViewController.m; sourceTree = "<group>"; };
+		AA00004A100000000000001A /* CPVendorStatementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPVendorStatementViewController.h; sourceTree = "<group>"; };
+		AA00004B000000000000001A /* CPChargerSimulatorAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPChargerSimulatorAdapter.m; sourceTree = "<group>"; };
+		AA00004B100000000000001A /* CPChargerSimulatorAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPChargerSimulatorAdapter.h; sourceTree = "<group>"; };
+		AA00004C000000000000001A /* CPWriteOffViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPWriteOffViewController.m; sourceTree = "<group>"; };
+		AA00004C100000000000001A /* CPWriteOffViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPWriteOffViewController.h; sourceTree = "<group>"; };
+		AA00004D000000000000001A /* CPReportsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPReportsViewController.m; sourceTree = "<group>"; };
+		AA00004D100000000000001A /* CPReportsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPReportsViewController.h; sourceTree = "<group>"; };
+		AA00004E000000000000001A /* CPRolesPermissionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPRolesPermissionsViewController.m; sourceTree = "<group>"; };
+		AA00004E100000000000001A /* CPRolesPermissionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPRolesPermissionsViewController.h; sourceTree = "<group>"; };
+		B52EC563B1B56A7F96954F76 /* CPUISecurityTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CPUISecurityTests.m; sourceTree = "<group>"; };
+		BB000000000000000000001A /* ChargeProcureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChargeProcureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB000000100000000000001A /* CPTestCoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPTestCoreDataStack.h; sourceTree = "<group>"; };
+		BB000001000000000000001A /* CPTestCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPTestCoreDataStack.m; sourceTree = "<group>"; };
+		BB000001100000000000001A /* CPTestDataFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPTestDataFactory.h; sourceTree = "<group>"; };
+		BB000002000000000000001A /* CPTestDataFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPTestDataFactory.m; sourceTree = "<group>"; };
+		BB000003000000000000001A /* CPAuthServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAuthServiceTests.m; sourceTree = "<group>"; };
+		BB000004000000000000001A /* CPProcurementServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPProcurementServiceTests.m; sourceTree = "<group>"; };
+		BB000005000000000000001A /* CPChargerServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPChargerServiceTests.m; sourceTree = "<group>"; };
+		BB000006000000000000001A /* CPBulletinServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPBulletinServiceTests.m; sourceTree = "<group>"; };
+		BB000007000000000000001A /* CPPricingServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPPricingServiceTests.m; sourceTree = "<group>"; };
+		BB000008000000000000001A /* CPAnalyticsServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAnalyticsServiceTests.m; sourceTree = "<group>"; };
+		BB000009000000000000001A /* CPAttachmentServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAttachmentServiceTests.m; sourceTree = "<group>"; };
+		BB00000A000000000000001A /* CPRBACServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPRBACServiceTests.m; sourceTree = "<group>"; };
+		BB00000B000000000000001A /* CPNavigationAndContractTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPNavigationAndContractTests.m; sourceTree = "<group>"; };
+		C2AC516F270522838BF4BB12 /* CPCouponPackageListViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPCouponPackageListViewController.h; path = Finance/CPCouponPackageListViewController.h; sourceTree = "<group>"; };
+		CCBE18F1B66050A56466638A /* CPCouponService.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CPCouponService.m; sourceTree = "<group>"; };
+		CC001111222233334444AAAA /* CPExportServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPExportServiceTests.m; sourceTree = "<group>"; };
+		BB00000C000000000000001A /* CPVCInteractionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPVCInteractionTests.m; sourceTree = "<group>"; };
+		BB000030000000000000001A /* CPE2ELoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPE2ELoginTests.m; sourceTree = "<group>"; };
+		BB000031000000000000001A /* CPE2ENavigationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPE2ENavigationTests.m; sourceTree = "<group>"; };
+		FF000020000000000000001A /* ChargeProcureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChargeProcureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0E29E35E054E8F869246F5 /* CPBulletinEditorRichTextTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CPBulletinEditorRichTextTests.m; sourceTree = "<group>"; };
+		E9422C043FEAE9EBFF8818D3 /* CPCouponPackageListViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPCouponPackageListViewController.m; path = Finance/CPCouponPackageListViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC000001000000000000001A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000042000000000000001B /* Foundation.framework in Frameworks */,
+				AA000043000000000000001B /* UIKit.framework in Frameworks */,
+				AA000044000000000000001B /* CoreData.framework in Frameworks */,
+				AA000045000000000000001B /* LocalAuthentication.framework in Frameworks */,
+				AA000046000000000000001B /* BackgroundTasks.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0A803448E654653DE2F7860 /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				142E172BDFD59E74C2442A59 /* CPDepositListViewController.h */,
+				86A8D3B9BEC1BC219201BB95 /* CPDepositListViewController.m */,
+				C2AC516F270522838BF4BB12 /* CPCouponPackageListViewController.h */,
+				E9422C043FEAE9EBFF8818D3 /* CPCouponPackageListViewController.m */,
+			);
+			name = Finance;
+			sourceTree = "<group>";
+		};
+		DD000000000000000000001A = {
+			isa = PBXGroup;
+			children = (
+				DD000001000000000000001A /* ChargeProcure */,
+				DD000002000000000000001A /* ChargeProcureTests */,
+				DD000006000000000000001A /* ChargeProcureUITests */,
+				DD000003000000000000001A /* Products */,
+				DD000004000000000000001A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DD000006000000000000001A /* ChargeProcureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB000030000000000000001A /* CPE2ELoginTests.m */,
+				BB000031000000000000001A /* CPE2ENavigationTests.m */,
+			);
+			path = ChargeProcureUITests;
+			sourceTree = "<group>";
+		};
+		DD000001000000000000001A /* ChargeProcure */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000100000000000001A /* AppDelegate.h */,
+				AA000001000000000000001A /* AppDelegate.m */,
+				AA000047000000000000001A /* main.m */,
+				DD000010000000000000001A /* Core */,
+				DD000020000000000000001A /* Navigation */,
+				DD000030000000000000001A /* Modules */,
+				DD000040000000000000001A /* Resources */,
+			);
+			path = ChargeProcure;
+			sourceTree = "<group>";
+		};
+		DD000002000000000000001A /* ChargeProcureTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB000000100000000000001A /* CPTestCoreDataStack.h */,
+				BB000001000000000000001A /* CPTestCoreDataStack.m */,
+				BB000001100000000000001A /* CPTestDataFactory.h */,
+				BB000002000000000000001A /* CPTestDataFactory.m */,
+				BB000003000000000000001A /* CPAuthServiceTests.m */,
+				BB000004000000000000001A /* CPProcurementServiceTests.m */,
+				BB000005000000000000001A /* CPChargerServiceTests.m */,
+				BB000006000000000000001A /* CPBulletinServiceTests.m */,
+				BB000007000000000000001A /* CPPricingServiceTests.m */,
+				BB000008000000000000001A /* CPAnalyticsServiceTests.m */,
+				BB000009000000000000001A /* CPAttachmentServiceTests.m */,
+				BB00000A000000000000001A /* CPRBACServiceTests.m */,
+				BB00000B000000000000001A /* CPNavigationAndContractTests.m */,
+				1347D59D98688D3DAE58A0AE /* CPDepositServiceTests.m */,
+				5D9B0EB172F8175F2E7ED5BE /* CPCouponServiceTests.m */,
+				94715CB11024273DE94AA1A1 /* CPSecurityRegressionTests.m */,
+				DE0E29E35E054E8F869246F5 /* CPBulletinEditorRichTextTests.m */,
+				B52EC563B1B56A7F96954F76 /* CPUISecurityTests.m */,
+				CC001111222233334444AAAA /* CPExportServiceTests.m */,
+				BB00000C000000000000001A /* CPVCInteractionTests.m */,
+			);
+			path = ChargeProcureTests;
+			sourceTree = "<group>";
+		};
+		DD000003000000000000001A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000001A /* ChargeProcure.app */,
+				BB000000000000000000001A /* ChargeProcureTests.xctest */,
+				FF000020000000000000001A /* ChargeProcureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD000004000000000000001A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA000042000000000000001A /* Foundation.framework */,
+				AA000043000000000000001A /* UIKit.framework */,
+				AA000044000000000000001A /* CoreData.framework */,
+				AA000045000000000000001A /* LocalAuthentication.framework */,
+				AA000046000000000000001A /* BackgroundTasks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD000010000000000000001A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DD000011000000000000001A /* CoreData */,
+				DD000012000000000000001A /* Services */,
+				DD000013000000000000001A /* Utilities */,
+				DD000014000000000000001A /* Background */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DD000011000000000000001A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AA000001100000000000001A /* CPCoreDataStack.h */,
+				AA000002000000000000001A /* CPCoreDataStack.m */,
+				AA000003000000000000001A /* Model.xcdatamodeld */,
+				DD000011100000000000001A /* Entities */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DD000011100000000000001A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AA000003100000000000001A /* CPUser+CoreDataClass.h */,
+				AA000004000000000000001A /* CPUser+CoreDataClass.m */,
+				AA000004100000000000001A /* CPUser+CoreDataProperties.h */,
+				AA000005000000000000001A /* CPUser+CoreDataProperties.m */,
+				AA000005100000000000001A /* CPCharger+CoreDataClass.h */,
+				AA000006000000000000001A /* CPCharger+CoreDataClass.m */,
+				AA000006100000000000001A /* CPCharger+CoreDataProperties.h */,
+				AA000007000000000000001A /* CPCharger+CoreDataProperties.m */,
+				AA000007100000000000001A /* CPBulletin+CoreDataClass.h */,
+				AA000008000000000000001A /* CPBulletin+CoreDataClass.m */,
+				AA000008100000000000001A /* CPBulletin+CoreDataProperties.h */,
+				AA000009000000000000001A /* CPBulletin+CoreDataProperties.m */,
+				AA000009100000000000001A /* CPProcurementCase+CoreDataClass.h */,
+				AA00000A000000000000001A /* CPProcurementCase+CoreDataClass.m */,
+				AA00000A100000000000001A /* CPProcurementCase+CoreDataProperties.h */,
+				AA00000B000000000000001A /* CPProcurementCase+CoreDataProperties.m */,
+				AA00000B100000000000001A /* CPInvoice+CoreDataClass.h */,
+				AA00000C000000000000001A /* CPInvoice+CoreDataClass.m */,
+				AA00000C100000000000001A /* CPInvoice+CoreDataProperties.h */,
+				AA00000D000000000000001A /* CPInvoice+CoreDataProperties.m */,
+				AA00000D100000000000001A /* CPPricingRule+CoreDataClass.h */,
+				AA00000E000000000000001A /* CPPricingRule+CoreDataClass.m */,
+				AA00000E100000000000001A /* CPPricingRule+CoreDataProperties.h */,
+				AA00000F000000000000001A /* CPPricingRule+CoreDataProperties.m */,
+				AA00000F100000000000001A /* CPVendor+CoreDataClass.h */,
+				AA000010000000000000001A /* CPVendor+CoreDataClass.m */,
+				AA000010100000000000001A /* CPVendor+CoreDataProperties.h */,
+				AA000011000000000000001A /* CPVendor+CoreDataProperties.m */,
+				AA000011100000000000001A /* CPCommand+CoreDataClass.h */,
+				AA000012000000000000001A /* CPCommand+CoreDataClass.m */,
+				AA000012100000000000001A /* CPCommand+CoreDataProperties.h */,
+				AA000013000000000000001A /* CPCommand+CoreDataProperties.m */,
+				AA000013100000000000001A /* CPAttachment+CoreDataClass.h */,
+				AA000014000000000000001A /* CPAttachment+CoreDataClass.m */,
+				AA000014100000000000001A /* CPAttachment+CoreDataProperties.h */,
+				AA000015000000000000001A /* CPAttachment+CoreDataProperties.m */,
+				AA000015100000000000001A /* CPAuditEvent+CoreDataClass.h */,
+				AA000016000000000000001A /* CPAuditEvent+CoreDataClass.m */,
+				AA000016100000000000001A /* CPAuditEvent+CoreDataProperties.h */,
+				AA000017000000000000001A /* CPAuditEvent+CoreDataProperties.m */,
+				AA000017100000000000001A /* CPChargerEvent+CoreDataClass.h */,
+				AA000018000000000000001A /* CPChargerEvent+CoreDataClass.m */,
+				AA000018100000000000001A /* CPChargerEvent+CoreDataProperties.h */,
+				AA000019000000000000001A /* CPChargerEvent+CoreDataProperties.m */,
+				AA000019100000000000001A /* CPBulletinVersion+CoreDataClass.h */,
+				AA00001A000000000000001A /* CPBulletinVersion+CoreDataClass.m */,
+				AA00001A100000000000001A /* CPBulletinVersion+CoreDataProperties.h */,
+				AA00001B000000000000001A /* CPBulletinVersion+CoreDataProperties.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DD000012000000000000001A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA00001B100000000000001A /* CPAuthService.h */,
+				AA00001C000000000000001A /* CPAuthService.m */,
+				AA00001C100000000000001A /* CPAuditService.h */,
+				AA00001D000000000000001A /* CPAuditService.m */,
+				AA00001D100000000000001A /* CPRBACService.h */,
+				AA00001E000000000000001A /* CPRBACService.m */,
+				AA00001E100000000000001A /* CPChargerService.h */,
+				AA00001F000000000000001A /* CPChargerService.m */,
+				AA00001F100000000000001A /* CPProcurementService.h */,
+				AA000020000000000000001A /* CPProcurementService.m */,
+				AA000020100000000000001A /* CPBulletinService.h */,
+				AA000021000000000000001A /* CPBulletinService.m */,
+				AA000021100000000000001A /* CPPricingService.h */,
+				AA000022000000000000001A /* CPPricingService.m */,
+				AA000022100000000000001A /* CPAnalyticsService.h */,
+				AA000023000000000000001A /* CPAnalyticsService.m */,
+				AA000023100000000000001A /* CPExportService.h */,
+				AA000024000000000000001A /* CPExportService.m */,
+				AA000024100000000000001A /* CPAttachmentService.h */,
+				AA000025000000000000001A /* CPAttachmentService.m */,
+				AA000048100000000000001A /* CPSessionManager.h */,
+				AA000048000000000000001A /* CPSessionManager.m */,
+				AA00004B100000000000001A /* CPChargerSimulatorAdapter.h */,
+				AA00004B000000000000001A /* CPChargerSimulatorAdapter.m */,
+				7B62BACE2DD9637AFCBB3381 /* CPDepositService.h */,
+				6AAFB478100F77F0C3BFAA61 /* CPDepositService.m */,
+				8C4B0617AA79B74CDE209904 /* CPCouponService.h */,
+				CCBE18F1B66050A56466638A /* CPCouponService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DD000013000000000000001A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA000025100000000000001A /* CPIDGenerator.h */,
+				AA000026000000000000001A /* CPIDGenerator.m */,
+				AA000026100000000000001A /* CPFileValidator.h */,
+				AA000027000000000000001A /* CPFileValidator.m */,
+				AA000027100000000000001A /* CPImageCache.h */,
+				AA000028000000000000001A /* CPImageCache.m */,
+				AA000028100000000000001A /* CPDateFormatter.h */,
+				AA000029000000000000001A /* CPDateFormatter.m */,
+				AA000029100000000000001A /* CPNumberFormatter.h */,
+				AA00002A000000000000001A /* CPNumberFormatter.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DD000014000000000000001A /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				AA00002A100000000000001A /* CPBackgroundTaskManager.h */,
+				AA00002B000000000000001A /* CPBackgroundTaskManager.m */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		DD000020000000000000001A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AA00002B100000000000001A /* CPTabBarController.h */,
+				AA00002C000000000000001A /* CPTabBarController.m */,
+				AA00002C100000000000001A /* CPSplitViewController.h */,
+				AA00002D000000000000001A /* CPSplitViewController.m */,
+				AA00002D100000000000001A /* CPSidebarViewController.h */,
+				AA00002E000000000000001A /* CPSidebarViewController.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		DD000030000000000000001A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DD000031000000000000001A /* Auth */,
+				DD000032000000000000001A /* Dashboard */,
+				DD000033000000000000001A /* Charger */,
+				DD000034000000000000001A /* Procurement */,
+				DD000035000000000000001A /* Bulletin */,
+				DD000036000000000000001A /* Pricing */,
+				DD000037000000000000001A /* Analytics */,
+				DD00003A000000000000001A /* Reports */,
+				DD000038000000000000001A /* Admin */,
+				DD000039000000000000001A /* Vendor */,
+				C0A803448E654653DE2F7860 /* Finance */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DD000031000000000000001A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AA00002E100000000000001A /* CPLoginViewController.h */,
+				AA00002F000000000000001A /* CPLoginViewController.m */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DD000032000000000000001A /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				AA00002F100000000000001A /* CPDashboardViewController.h */,
+				AA000030000000000000001A /* CPDashboardViewController.m */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		DD000033000000000000001A /* Charger */ = {
+			isa = PBXGroup;
+			children = (
+				AA000030100000000000001A /* CPChargerListViewController.h */,
+				AA000031000000000000001A /* CPChargerListViewController.m */,
+				AA000031100000000000001A /* CPChargerDetailViewController.h */,
+				AA000032000000000000001A /* CPChargerDetailViewController.m */,
+			);
+			path = Charger;
+			sourceTree = "<group>";
+		};
+		DD000034000000000000001A /* Procurement */ = {
+			isa = PBXGroup;
+			children = (
+				AA000032100000000000001A /* CPProcurementListViewController.h */,
+				AA000033000000000000001A /* CPProcurementListViewController.m */,
+				AA000033100000000000001A /* CPProcurementCaseViewController.h */,
+				AA000034000000000000001A /* CPProcurementCaseViewController.m */,
+				AA000034100000000000001A /* CPInvoiceViewController.h */,
+				AA000035000000000000001A /* CPInvoiceViewController.m */,
+				AA00004A100000000000001A /* CPVendorStatementViewController.h */,
+				AA00004A000000000000001A /* CPVendorStatementViewController.m */,
+				AA00004C100000000000001A /* CPWriteOffViewController.h */,
+				AA00004C000000000000001A /* CPWriteOffViewController.m */,
+			);
+			path = Procurement;
+			sourceTree = "<group>";
+		};
+		DD000035000000000000001A /* Bulletin */ = {
+			isa = PBXGroup;
+			children = (
+				AA000035100000000000001A /* CPBulletinListViewController.h */,
+				AA000036000000000000001A /* CPBulletinListViewController.m */,
+				AA000036100000000000001A /* CPBulletinDetailViewController.h */,
+				AA000037000000000000001A /* CPBulletinDetailViewController.m */,
+				AA000037100000000000001A /* CPBulletinEditorViewController.h */,
+				AA000038000000000000001A /* CPBulletinEditorViewController.m */,
+			);
+			path = Bulletin;
+			sourceTree = "<group>";
+		};
+		DD000036000000000000001A /* Pricing */ = {
+			isa = PBXGroup;
+			children = (
+				AA000038100000000000001A /* CPPricingRuleListViewController.h */,
+				AA000039000000000000001A /* CPPricingRuleListViewController.m */,
+				AA000039100000000000001A /* CPPricingRuleDetailViewController.h */,
+				AA00003A000000000000001A /* CPPricingRuleDetailViewController.m */,
+			);
+			path = Pricing;
+			sourceTree = "<group>";
+		};
+		DD000037000000000000001A /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				AA00003A100000000000001A /* CPAnalyticsDashboardViewController.h */,
+				AA00003B000000000000001A /* CPAnalyticsDashboardViewController.m */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		DD000038000000000000001A /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				AA00003B100000000000001A /* CPUserManagementViewController.h */,
+				AA00003C000000000000001A /* CPUserManagementViewController.m */,
+				AA00003C100000000000001A /* CPAuditLogViewController.h */,
+				AA00003D000000000000001A /* CPAuditLogViewController.m */,
+				AA000049100000000000001A /* CPSettingsViewController.h */,
+				AA000049000000000000001A /* CPSettingsViewController.m */,
+				AA00004E100000000000001A /* CPRolesPermissionsViewController.h */,
+				AA00004E000000000000001A /* CPRolesPermissionsViewController.m */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		DD000039000000000000001A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				AA00003D100000000000001A /* CPVendorListViewController.h */,
+				AA00003E000000000000001A /* CPVendorListViewController.m */,
+				AA00003E100000000000001A /* CPVendorDetailViewController.h */,
+				AA00003F000000000000001A /* CPVendorDetailViewController.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		DD00003A000000000000001A /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				AA00004D100000000000001A /* CPReportsViewController.h */,
+				AA00004D000000000000001A /* CPReportsViewController.m */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		DD000040000000000000001A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA000040000000000000001A /* LaunchScreen.storyboard */,
+				AA000041000000000000001A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE000001000000000000001A /* ChargeProcure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE000002000000000000001A /* Build configuration list for PBXNativeTarget "ChargeProcure" */;
+			buildPhases = (
+				CC000001000000000000001A /* Frameworks */,
+				CC000002000000000000001A /* Sources */,
+				CC000003000000000000001A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChargeProcure;
+			productName = ChargeProcure;
+			productReference = AA000000000000000000001A /* ChargeProcure.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE000010000000000000001A /* ChargeProcureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE000011000000000000001A /* Build configuration list for PBXNativeTarget "ChargeProcureTests" */;
+			buildPhases = (
+				CC000010000000000000001A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE000012000000000000001A /* PBXTargetDependency */,
+			);
+			name = ChargeProcureTests;
+			productName = ChargeProcureTests;
+			productReference = BB000000000000000000001A /* ChargeProcureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE000020000000000000001A /* ChargeProcureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE000021000000000000001A /* Build configuration list for PBXNativeTarget "ChargeProcureUITests" */;
+			buildPhases = (
+				CC000020000000000000001A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE000024000000000000001A /* PBXTargetDependency */,
+			);
+			name = ChargeProcureUITests;
+			productName = ChargeProcureUITests;
+			productReference = FF000020000000000000001A /* ChargeProcureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF000001000000000000001A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EE000001000000000000001A = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					EE000010000000000000001A = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = EE000001000000000000001A;
+					};
+					EE000020000000000000001A = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = EE000001000000000000001A;
+					};
+				};
+			};
+			buildConfigurationList = FF000002000000000000001A /* Build configuration list for PBXProject "ChargeProcure" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD000000000000000000001A;
+			productRefGroup = DD000003000000000000001A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE000001000000000000001A /* ChargeProcure */,
+				EE000010000000000000001A /* ChargeProcureTests */,
+				EE000020000000000000001A /* ChargeProcureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC000003000000000000001A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000040000000000000001B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC000002000000000000001A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000047000000000000001B /* main.m in Sources */,
+				AA000001000000000000001B /* AppDelegate.m in Sources */,
+				AA000002000000000000001B /* CPCoreDataStack.m in Sources */,
+				AA000003000000000000001B /* Model.xcdatamodeld in Sources */,
+				AA000004000000000000001B /* CPUser+CoreDataClass.m in Sources */,
+				AA000005000000000000001B /* CPUser+CoreDataProperties.m in Sources */,
+				AA000006000000000000001B /* CPCharger+CoreDataClass.m in Sources */,
+				AA000007000000000000001B /* CPCharger+CoreDataProperties.m in Sources */,
+				AA000008000000000000001B /* CPBulletin+CoreDataClass.m in Sources */,
+				AA000009000000000000001B /* CPBulletin+CoreDataProperties.m in Sources */,
+				AA00000A000000000000001B /* CPProcurementCase+CoreDataClass.m in Sources */,
+				AA00000B000000000000001B /* CPProcurementCase+CoreDataProperties.m in Sources */,
+				AA00000C000000000000001B /* CPInvoice+CoreDataClass.m in Sources */,
+				AA00000D000000000000001B /* CPInvoice+CoreDataProperties.m in Sources */,
+				AA00000E000000000000001B /* CPPricingRule+CoreDataClass.m in Sources */,
+				AA00000F000000000000001B /* CPPricingRule+CoreDataProperties.m in Sources */,
+				AA000010000000000000001B /* CPVendor+CoreDataClass.m in Sources */,
+				AA000011000000000000001B /* CPVendor+CoreDataProperties.m in Sources */,
+				AA000012000000000000001B /* CPCommand+CoreDataClass.m in Sources */,
+				AA000013000000000000001B /* CPCommand+CoreDataProperties.m in Sources */,
+				AA000014000000000000001B /* CPAttachment+CoreDataClass.m in Sources */,
+				AA000015000000000000001B /* CPAttachment+CoreDataProperties.m in Sources */,
+				AA000016000000000000001B /* CPAuditEvent+CoreDataClass.m in Sources */,
+				AA000017000000000000001B /* CPAuditEvent+CoreDataProperties.m in Sources */,
+				AA000018000000000000001B /* CPChargerEvent+CoreDataClass.m in Sources */,
+				AA000019000000000000001B /* CPChargerEvent+CoreDataProperties.m in Sources */,
+				AA00001A000000000000001B /* CPBulletinVersion+CoreDataClass.m in Sources */,
+				AA00001B000000000000001B /* CPBulletinVersion+CoreDataProperties.m in Sources */,
+				AA00001C000000000000001B /* CPAuthService.m in Sources */,
+				AA00001D000000000000001B /* CPAuditService.m in Sources */,
+				AA00001E000000000000001B /* CPRBACService.m in Sources */,
+				AA00001F000000000000001B /* CPChargerService.m in Sources */,
+				AA000020000000000000001B /* CPProcurementService.m in Sources */,
+				AA000021000000000000001B /* CPBulletinService.m in Sources */,
+				AA000022000000000000001B /* CPPricingService.m in Sources */,
+				AA000023000000000000001B /* CPAnalyticsService.m in Sources */,
+				AA000024000000000000001B /* CPExportService.m in Sources */,
+				AA000025000000000000001B /* CPAttachmentService.m in Sources */,
+				AA000048000000000000001B /* CPSessionManager.m in Sources */,
+				AA000026000000000000001B /* CPIDGenerator.m in Sources */,
+				AA000027000000000000001B /* CPFileValidator.m in Sources */,
+				AA000028000000000000001B /* CPImageCache.m in Sources */,
+				AA000029000000000000001B /* CPDateFormatter.m in Sources */,
+				AA00002A000000000000001B /* CPNumberFormatter.m in Sources */,
+				AA00002B000000000000001B /* CPBackgroundTaskManager.m in Sources */,
+				AA00002C000000000000001B /* CPTabBarController.m in Sources */,
+				AA00002D000000000000001B /* CPSplitViewController.m in Sources */,
+				AA00002E000000000000001B /* CPSidebarViewController.m in Sources */,
+				AA00002F000000000000001B /* CPLoginViewController.m in Sources */,
+				AA000030000000000000001B /* CPDashboardViewController.m in Sources */,
+				AA000031000000000000001B /* CPChargerListViewController.m in Sources */,
+				AA000032000000000000001B /* CPChargerDetailViewController.m in Sources */,
+				AA000033000000000000001B /* CPProcurementListViewController.m in Sources */,
+				AA000034000000000000001B /* CPProcurementCaseViewController.m in Sources */,
+				AA000035000000000000001B /* CPInvoiceViewController.m in Sources */,
+				AA00004A000000000000001B /* CPVendorStatementViewController.m in Sources */,
+				AA000036000000000000001B /* CPBulletinListViewController.m in Sources */,
+				AA000037000000000000001B /* CPBulletinDetailViewController.m in Sources */,
+				AA000038000000000000001B /* CPBulletinEditorViewController.m in Sources */,
+				AA000039000000000000001B /* CPPricingRuleListViewController.m in Sources */,
+				AA00003A000000000000001B /* CPPricingRuleDetailViewController.m in Sources */,
+				AA00003B000000000000001B /* CPAnalyticsDashboardViewController.m in Sources */,
+				AA00003C000000000000001B /* CPUserManagementViewController.m in Sources */,
+				AA00003D000000000000001B /* CPAuditLogViewController.m in Sources */,
+				AA000049000000000000001B /* CPSettingsViewController.m in Sources */,
+				AA00003E000000000000001B /* CPVendorListViewController.m in Sources */,
+				AA00003F000000000000001B /* CPVendorDetailViewController.m in Sources */,
+				AA00004B000000000000001B /* CPChargerSimulatorAdapter.m in Sources */,
+				AA00004C000000000000001B /* CPWriteOffViewController.m in Sources */,
+				AA00004D000000000000001B /* CPReportsViewController.m in Sources */,
+				AA00004E000000000000001B /* CPRolesPermissionsViewController.m in Sources */,
+				E69F507B21C6880D180AD474 /* CPDepositService.m in Sources */,
+				43BEF5544C8E85B3BB911FFA /* CPCouponService.m in Sources */,
+				DBBC5EAC2520567C4AB7C4C4 /* CPDepositListViewController.m in Sources */,
+				C22337C74AC0994C102BFB46 /* CPCouponPackageListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC000010000000000000001A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB000001000000000000001B /* CPTestCoreDataStack.m in Sources */,
+				BB000002000000000000001B /* CPTestDataFactory.m in Sources */,
+				BB000003000000000000001B /* CPAuthServiceTests.m in Sources */,
+				BB000004000000000000001B /* CPProcurementServiceTests.m in Sources */,
+				BB000005000000000000001B /* CPChargerServiceTests.m in Sources */,
+				BB000006000000000000001B /* CPBulletinServiceTests.m in Sources */,
+				BB000007000000000000001B /* CPPricingServiceTests.m in Sources */,
+				BB000008000000000000001B /* CPAnalyticsServiceTests.m in Sources */,
+				BB000009000000000000001B /* CPAttachmentServiceTests.m in Sources */,
+				BB00000A000000000000001B /* CPRBACServiceTests.m in Sources */,
+				BB00000B000000000000001B /* CPNavigationAndContractTests.m in Sources */,
+				F938968EB153AEF78D19FB7E /* CPDepositServiceTests.m in Sources */,
+				8FCD2CFACF4849232A5193B9 /* CPCouponServiceTests.m in Sources */,
+				142658305253A75EA447C7F9 /* CPSecurityRegressionTests.m in Sources */,
+				4506DF02F03ABA4845871A7E /* CPBulletinEditorRichTextTests.m in Sources */,
+				68A77229564A172C40A24CDB /* CPUISecurityTests.m in Sources */,
+				CC001111222233334444AAAB /* CPExportServiceTests.m in Sources */,
+				BB00000C000000000000001B /* CPVCInteractionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC000020000000000000001A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB000030000000000000001B /* CPE2ELoginTests.m in Sources */,
+				BB000031000000000000001B /* CPE2ENavigationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE000012000000000000001A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE000001000000000000001A /* ChargeProcure */;
+			targetProxy = EE000013000000000000001A /* PBXContainerItemProxy */;
+		};
+		EE000024000000000000001A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE000001000000000000001A /* ChargeProcure */;
+			targetProxy = EE000025000000000000001A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE000003000000000000001A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = ChargeProcure/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chargeprocure.fieldops;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE000004000000000000001A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = NO;
+				INFOPLIST_FILE = ChargeProcure/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chargeprocure.fieldops;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE000014000000000000001A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = ChargeProcureTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chargeprocure.fieldops.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChargeProcure.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChargeProcure";
+			};
+			name = Debug;
+		};
+		EE000015000000000000001A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = ChargeProcureTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chargeprocure.fieldops.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChargeProcure.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChargeProcure";
+			};
+			name = Release;
+		};
+		EE000022000000000000001A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chargeprocure.fieldops.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChargeProcure;
+			};
+			name = Debug;
+		};
+		EE000023000000000000001A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chargeprocure.fieldops.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChargeProcure;
+			};
+			name = Release;
+		};
+		FF000010000000000000001A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/ChargeProcure/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		FF000011000000000000001A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/ChargeProcure/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE000002000000000000001A /* Build configuration list for PBXNativeTarget "ChargeProcure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE000003000000000000001A /* Debug */,
+				EE000004000000000000001A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE000011000000000000001A /* Build configuration list for PBXNativeTarget "ChargeProcureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE000014000000000000001A /* Debug */,
+				EE000015000000000000001A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE000021000000000000001A /* Build configuration list for PBXNativeTarget "ChargeProcureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE000022000000000000001A /* Debug */,
+				EE000023000000000000001A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF000002000000000000001A /* Build configuration list for PBXProject "ChargeProcure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF000010000000000000001A /* Debug */,
+				FF000011000000000000001A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF000001000000000000001A /* Project object */;
+}

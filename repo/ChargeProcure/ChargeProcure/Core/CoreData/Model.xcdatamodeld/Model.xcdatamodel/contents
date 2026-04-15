@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="username" optional="NO" attributeType="String"/>
+        <attribute name="passwordHash" optional="NO" attributeType="String"/>
+        <attribute name="salt" optional="NO" attributeType="String"/>
+        <attribute name="failedAttempts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="lockoutUntil" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastLoginAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO"/>
+        <attribute name="biometricEnabled" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <relationship name="role" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Role" inverseName="users" inverseEntity="Role"/>
+        <relationship name="auditEvents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AuditEvent" inverseName="user" inverseEntity="AuditEvent"/>
+    </entity>
+    <entity name="Role" representedClassName="Role" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="name" optional="NO" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="role" inverseEntity="User"/>
+        <relationship name="permissions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Permission" inverseName="role" inverseEntity="Permission"/>
+    </entity>
+    <entity name="Permission" representedClassName="Permission" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="resource" optional="NO" attributeType="String"/>
+        <attribute name="action" optional="NO" attributeType="String"/>
+        <attribute name="isGranted" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <relationship name="role" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Role" inverseName="permissions" inverseEntity="Role"/>
+    </entity>
+    <entity name="AuditEvent" representedClassName="AuditEvent" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="actorID" optional="YES" attributeType="String"/>
+        <attribute name="actorUsername" optional="YES" attributeType="String"/>
+        <attribute name="action" optional="YES" attributeType="String"/>
+        <attribute name="resource" optional="YES" attributeType="String"/>
+        <attribute name="resourceID" optional="YES" attributeType="String"/>
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="deviceID" optional="YES" attributeType="String"/>
+        <attribute name="occurredAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="auditEvents" inverseEntity="User"/>
+    </entity>
+    <entity name="Charger" representedClassName="Charger" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="vendorID" optional="YES" attributeType="String"/>
+        <attribute name="serialNumber" optional="YES" attributeType="String"/>
+        <attribute name="model" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="lastSeenAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="firmwareVersion" optional="YES" attributeType="String"/>
+        <attribute name="parameters" optional="YES" attributeType="String"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ChargerEvent" inverseName="charger" inverseEntity="ChargerEvent"/>
+        <relationship name="commands" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Command" inverseName="charger" inverseEntity="Command"/>
+    </entity>
+    <entity name="ChargerEvent" representedClassName="ChargerEvent" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="chargerID" optional="YES" attributeType="String"/>
+        <attribute name="eventType" optional="YES" attributeType="String"/>
+        <attribute name="previousStatus" optional="YES" attributeType="String"/>
+        <attribute name="newStatus" optional="YES" attributeType="String"/>
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="occurredAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="charger" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Charger" inverseName="events" inverseEntity="Charger"/>
+    </entity>
+    <entity name="Command" representedClassName="Command" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="chargerID" optional="YES" attributeType="String"/>
+        <attribute name="commandType" optional="YES" attributeType="String"/>
+        <attribute name="parameters" optional="YES" attributeType="String"/>
+        <attribute name="issuedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="acknowledgedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="issuedByUserID" optional="YES" attributeType="String"/>
+        <attribute name="pendingReviewReason" optional="YES" attributeType="String"/>
+        <relationship name="charger" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Charger" inverseName="commands" inverseEntity="Charger"/>
+    </entity>
+    <entity name="Vendor" representedClassName="Vendor" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="name" optional="NO" attributeType="String"/>
+        <attribute name="contactName" optional="YES" attributeType="String"/>
+        <attribute name="contactEmail" optional="YES" attributeType="String"/>
+        <attribute name="contactPhone" optional="YES" attributeType="String"/>
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="procurementCases" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProcurementCase" inverseName="vendor" inverseEntity="ProcurementCase"/>
+        <relationship name="pricingRules" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PricingRule" inverseName="vendor" inverseEntity="PricingRule"/>
+    </entity>
+    <entity name="ProcurementCase" representedClassName="CPProcurementCase" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="caseNumber" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="stage" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdByUserID" optional="YES" attributeType="String"/>
+        <attribute name="totalAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="vendor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vendor" inverseName="procurementCases" inverseEntity="Vendor"/>
+        <relationship name="requisition" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Requisition" inverseName="procurementCase" inverseEntity="Requisition"/>
+        <relationship name="rfq" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RFQ" inverseName="procurementCase" inverseEntity="RFQ"/>
+        <relationship name="purchaseOrder" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PurchaseOrder" inverseName="procurementCase" inverseEntity="PurchaseOrder"/>
+        <relationship name="receipts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Receipt" inverseName="procurementCase" inverseEntity="Receipt"/>
+        <relationship name="returns" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Return" inverseName="procurementCase" inverseEntity="Return"/>
+        <relationship name="invoices" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Invoice" inverseName="procurementCase" inverseEntity="Invoice"/>
+        <relationship name="payments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Payment" inverseName="procurementCase" inverseEntity="Payment"/>
+    </entity>
+    <entity name="Requisition" representedClassName="Requisition" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="caseID" optional="YES" attributeType="String"/>
+        <attribute name="requestedBy" optional="YES" attributeType="String"/>
+        <attribute name="description" optional="YES" attributeType="String"/>
+        <attribute name="justification" optional="YES" attributeType="String"/>
+        <attribute name="estimatedAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="approvedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="approvedByUserID" optional="YES" attributeType="String"/>
+        <relationship name="procurementCase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProcurementCase" inverseName="requisition" inverseEntity="ProcurementCase"/>
+        <relationship name="lineItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="POLineItem" inverseName="purchaseOrder" inverseEntity="POLineItem"/>
+    </entity>
+    <entity name="RFQ" representedClassName="RFQ" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="caseID" optional="YES" attributeType="String"/>
+        <attribute name="issuedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="procurementCase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProcurementCase" inverseName="rfq" inverseEntity="ProcurementCase"/>
+        <relationship name="bids" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RFQBid" inverseName="rfq" inverseEntity="RFQBid"/>
+    </entity>
+    <entity name="RFQBid" representedClassName="RFQBid" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="rfqID" optional="YES" attributeType="String"/>
+        <attribute name="vendorID" optional="YES" attributeType="String"/>
+        <attribute name="vendorName" optional="YES" attributeType="String"/>
+        <attribute name="unitPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="totalPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="taxAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="submittedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isSelected" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="rfq" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RFQ" inverseName="bids" inverseEntity="RFQ"/>
+    </entity>
+    <entity name="PurchaseOrder" representedClassName="PurchaseOrder" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="caseID" optional="YES" attributeType="String"/>
+        <attribute name="poNumber" optional="YES" attributeType="String"/>
+        <attribute name="issuedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="expectedDelivery" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="totalAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="taxAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="procurementCase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProcurementCase" inverseName="purchaseOrder" inverseEntity="ProcurementCase"/>
+        <relationship name="lineItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="POLineItem" inverseName="purchaseOrder" inverseEntity="POLineItem"/>
+    </entity>
+    <entity name="POLineItem" representedClassName="POLineItem" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="poID" optional="YES" attributeType="String"/>
+        <attribute name="description" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="unitPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="totalPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="taxRate" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="receivedQty" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="purchaseOrder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PurchaseOrder" inverseName="lineItems" inverseEntity="PurchaseOrder"/>
+    </entity>
+    <entity name="Receipt" representedClassName="Receipt" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="caseID" optional="YES" attributeType="String"/>
+        <attribute name="poID" optional="YES" attributeType="String"/>
+        <attribute name="receiptNumber" optional="YES" attributeType="String"/>
+        <attribute name="receivedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="receivedByUserID" optional="YES" attributeType="String"/>
+        <attribute name="isPartial" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="procurementCase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProcurementCase" inverseName="receipts" inverseEntity="ProcurementCase"/>
+        <relationship name="lineItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="POLineItem" inverseName="purchaseOrder" inverseEntity="POLineItem"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Attachment" inverseName="receipt" inverseEntity="Attachment"/>
+    </entity>
+    <entity name="Return" representedClassName="Return" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="caseID" optional="YES" attributeType="String"/>
+        <attribute name="receiptID" optional="YES" attributeType="String"/>
+        <attribute name="returnNumber" optional="YES" attributeType="String"/>
+        <attribute name="reason" optional="YES" attributeType="String"/>
+        <attribute name="returnedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="returnedByUserID" optional="YES" attributeType="String"/>
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="procurementCase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProcurementCase" inverseName="returns" inverseEntity="ProcurementCase"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Attachment" inverseName="return" inverseEntity="Attachment"/>
+    </entity>
+    <entity name="Invoice" representedClassName="Invoice" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="caseID" optional="YES" attributeType="String"/>
+        <attribute name="invoiceNumber" optional="YES" attributeType="String"/>
+        <attribute name="vendorInvoiceNumber" optional="YES" attributeType="String"/>
+        <attribute name="invoicedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="totalAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="taxAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="varianceAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="variancePercentage" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="varianceFlag" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="writeOffAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="procurementCase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProcurementCase" inverseName="invoices" inverseEntity="ProcurementCase"/>
+        <relationship name="lineItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="InvoiceLineItem" inverseName="invoice" inverseEntity="InvoiceLineItem"/>
+        <relationship name="payment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Payment" inverseName="invoice" inverseEntity="Payment"/>
+        <relationship name="writeOffs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WriteOff" inverseName="invoice" inverseEntity="WriteOff"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Attachment" inverseName="invoice" inverseEntity="Attachment"/>
+    </entity>
+    <entity name="InvoiceLineItem" representedClassName="InvoiceLineItem" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="invoiceID" optional="YES" attributeType="String"/>
+        <attribute name="description" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="unitPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="totalPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="taxRate" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="invoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Invoice" inverseName="lineItems" inverseEntity="Invoice"/>
+    </entity>
+    <entity name="Payment" representedClassName="Payment" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="caseID" optional="YES" attributeType="String"/>
+        <attribute name="invoiceID" optional="YES" attributeType="String"/>
+        <attribute name="paymentNumber" optional="YES" attributeType="String"/>
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="paidAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="method" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="reconciledAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="reconciledByUserID" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="procurementCase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProcurementCase" inverseName="payments" inverseEntity="ProcurementCase"/>
+        <relationship name="invoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Invoice" inverseName="payment" inverseEntity="Invoice"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Attachment" inverseName="payment" inverseEntity="Attachment"/>
+    </entity>
+    <entity name="WriteOff" representedClassName="WriteOff" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="invoiceID" optional="YES" attributeType="String"/>
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="reason" optional="YES" attributeType="String"/>
+        <attribute name="approvedByUserID" optional="YES" attributeType="String"/>
+        <attribute name="approvedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="invoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Invoice" inverseName="writeOffs" inverseEntity="Invoice"/>
+    </entity>
+    <entity name="PricingRule" representedClassName="PricingRule" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="serviceType" optional="YES" attributeType="String"/>
+        <attribute name="vehicleClass" optional="YES" attributeType="String"/>
+        <attribute name="storeID" optional="YES" attributeType="String"/>
+        <attribute name="effectiveStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="effectiveEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="basePrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="tierJSON" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO"/>
+        <attribute name="version" optional="YES" attributeType="Integer 32" defaultValueString="1" usesScalarValueType="NO"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="vendor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vendor" inverseName="pricingRules" inverseEntity="Vendor"/>
+    </entity>
+    <entity name="DepositRule" representedClassName="DepositRule" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="serviceType" optional="YES" attributeType="String"/>
+        <attribute name="depositAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="preAuthAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="effectiveStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="effectiveEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Bulletin" representedClassName="Bulletin" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="body" optional="YES" attributeType="String"/>
+        <attribute name="bodyHTML" optional="YES" attributeType="String"/>
+        <attribute name="statusValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="editorModeValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isPinned" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="recommendationWeight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="coverImagePath" optional="YES" attributeType="String"/>
+        <attribute name="publishDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="unpublishDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="authorID" optional="YES" attributeType="String"/>
+        <attribute name="currentVersionID" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <attribute name="externalURL" optional="YES" attributeType="String"/>
+        <relationship name="versions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BulletinVersion" inverseName="bulletin" inverseEntity="BulletinVersion"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Attachment" inverseName="bulletin" inverseEntity="Attachment"/>
+    </entity>
+    <entity name="BulletinVersion" representedClassName="BulletinVersion" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="bulletinID" optional="YES" attributeType="String"/>
+        <attribute name="versionNumber" optional="YES" attributeType="Integer 32" defaultValueString="1" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="bodyMarkdown" optional="YES" attributeType="String"/>
+        <attribute name="bodyHTML" optional="YES" attributeType="String"/>
+        <attribute name="coverImagePath" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdByUserID" optional="YES" attributeType="String"/>
+        <relationship name="bulletin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bulletin" inverseName="versions" inverseEntity="Bulletin"/>
+    </entity>
+    <entity name="Attachment" representedClassName="Attachment" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="ownerID" optional="YES" attributeType="String"/>
+        <attribute name="ownerType" optional="YES" attributeType="String"/>
+        <attribute name="filename" optional="YES" attributeType="String"/>
+        <attribute name="mimeType" optional="YES" attributeType="String"/>
+        <attribute name="filePath" optional="YES" attributeType="String"/>
+        <attribute name="fileSize" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="uploadedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="fileType" optional="YES" attributeType="String"/>
+        <relationship name="receipt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Receipt" inverseName="attachments" inverseEntity="Receipt"/>
+        <relationship name="return" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Return" inverseName="attachments" inverseEntity="Return"/>
+        <relationship name="invoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Invoice" inverseName="attachments" inverseEntity="Invoice"/>
+        <relationship name="payment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Payment" inverseName="attachments" inverseEntity="Payment"/>
+        <relationship name="bulletin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bulletin" inverseName="attachments" inverseEntity="Bulletin"/>
+    </entity>
+    <entity name="ReportExport" representedClassName="ReportExport" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="reportType" optional="YES" attributeType="String"/>
+        <attribute name="parameters" optional="YES" attributeType="String"/>
+        <attribute name="filePath" optional="YES" attributeType="String"/>
+        <attribute name="fileFormat" optional="YES" attributeType="String"/>
+        <attribute name="generatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="generatedByUserID" optional="YES" attributeType="String"/>
+        <attribute name="fileSize" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="CouponPackage" representedClassName="CouponPackage" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="description" optional="YES" attributeType="String"/>
+        <attribute name="discountType" optional="YES" attributeType="String"/>
+        <attribute name="discountValue" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="minAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="maxDiscount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="usageCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="maxUsage" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="effectiveStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="effectiveEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="DepositTracking" representedClassName="DepositTracking" syncable="YES">
+        <attribute name="uuid" optional="NO" attributeType="String" indexed="YES"/>
+        <attribute name="chargerID" optional="YES" attributeType="String"/>
+        <attribute name="customerRef" optional="YES" attributeType="String"/>
+        <attribute name="depositAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="preAuthAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="capturedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="releasedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="238"/>
+        <element name="Role" positionX="160" positionY="-18" width="128" height="104"/>
+        <element name="Permission" positionX="385" positionY="-18" width="128" height="119"/>
+        <element name="AuditEvent" positionX="-63" positionY="270" width="128" height="209"/>
+        <element name="Charger" positionX="160" positionY="270" width="128" height="224"/>
+        <element name="ChargerEvent" positionX="385" positionY="270" width="128" height="179"/>
+        <element name="Command" positionX="610" positionY="270" width="128" height="209"/>
+        <element name="Vendor" positionX="-63" positionY="540" width="128" height="194"/>
+        <element name="ProcurementCase" positionX="160" positionY="540" width="128" height="299"/>
+        <element name="Requisition" positionX="385" positionY="540" width="128" height="239"/>
+        <element name="RFQ" positionX="610" positionY="540" width="128" height="149"/>
+        <element name="RFQBid" positionX="835" positionY="540" width="128" height="239"/>
+        <element name="PurchaseOrder" positionX="-63" positionY="810" width="128" height="224"/>
+        <element name="POLineItem" positionX="160" positionY="810" width="128" height="194"/>
+        <element name="Receipt" positionX="385" positionY="810" width="128" height="194"/>
+        <element name="Return" positionX="610" positionY="810" width="128" height="209"/>
+        <element name="Invoice" positionX="835" positionY="810" width="128" height="314"/>
+        <element name="InvoiceLineItem" positionX="-63" positionY="1080" width="128" height="179"/>
+        <element name="Payment" positionX="160" positionY="1080" width="128" height="269"/>
+        <element name="WriteOff" positionX="385" positionY="1080" width="128" height="164"/>
+        <element name="PricingRule" positionX="610" positionY="1080" width="128" height="284"/>
+        <element name="DepositRule" positionX="835" positionY="1080" width="128" height="194"/>
+        <element name="Bulletin" positionX="-63" positionY="1350" width="128" height="389"/>
+        <element name="BulletinVersion" positionX="160" positionY="1350" width="128" height="239"/>
+        <element name="Attachment" positionX="385" positionY="1350" width="128" height="224"/>
+        <element name="ReportExport" positionX="610" positionY="1350" width="128" height="194"/>
+        <element name="CouponPackage" positionX="835" positionY="1350" width="128" height="314"/>
+        <element name="DepositTracking" positionX="-63" positionY="1620" width="128" height="224"/>
+    </elements>
+</model>
