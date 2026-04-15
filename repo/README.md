@@ -130,11 +130,11 @@ Three default accounts are seeded on first launch. **Each account requires a man
 
 | Role | Username | Password | Notes |
 | :--- | :--- | :--- | :--- |
-| **Administrator** | `admin` | *(generated at first launch — see below)* | Full access to all modules including audit log, pricing, user management, and reports. |
-| **Site Technician** | `technician` | *(generated at first launch — see below)* | Access to Dashboard, Chargers, Procurement, and Bulletins. |
-| **Finance Approver** | `finance` | *(generated at first launch — see below)* | Access to Dashboard, Procurement (invoices/write-offs), Analytics, and Deposits/Coupons. |
+| **Administrator** | `admin` | `Admin1234Pass` | Full access to all modules including audit log, pricing, user management, and reports. |
+| **Site Technician** | `technician` | `Tech1234Pass` | Access to Dashboard, Chargers, Procurement, and Bulletins. |
+| **Finance Approver** | `finance` | `Fin1234Pass` | Access to Dashboard, Procurement (invoices/write-offs), Analytics, and Deposits/Coupons. |
 
-**How to retrieve the passwords:** Default passwords are generated at first launch using `SecRandomCopyBytes` — they are never hardcoded in source or written to any log. After seeding, `AppDelegate` displays a one-time in-app alert with all three credentials. Copy them immediately; the values are discarded after the alert is dismissed.
+**How to retrieve the passwords:** Passwords are hardcoded defaults used during first-run seeding. The same credentials are also shown in a first-run in-app alert from `AppDelegate`.
 
 Role-based module access:
 

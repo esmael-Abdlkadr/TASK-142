@@ -69,7 +69,7 @@
     //    the canonical identifier constants matching Info.plist.
     [[CPBackgroundTaskManager sharedManager] registerBackgroundTasks];
 
-    // 5. If first-run seeding generated bootstrap credentials, show them once
+    // 5. If first-run seeding prepared bootstrap credentials, show them once
     //    in a secure in-app alert so the operator can note them.  This replaces
     //    the former NSLog approach and ensures credentials are never written to
     //    any persistent log.  The alert is presented after makeKeyAndVisible so
@@ -217,7 +217,7 @@
     [[CPAuthService sharedService] clearPendingBootstrapCredentials];
 
     NSMutableString *body = [NSMutableString string];
-    [body appendString:@"Note these credentials before dismissing — they cannot be recovered.\n\n"];
+    [body appendString:@"Note these credentials before dismissing.\n\n"];
     [creds enumerateKeysAndObjectsUsingBlock:^(NSString *user, NSString *pwd, BOOL *stop) {
         [body appendFormat:@"%@: %@\n", user, pwd];
     }];

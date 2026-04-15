@@ -57,8 +57,8 @@ typedef NS_ENUM(NSInteger, CPAuthError) {
 
 /// Change password without requiring the old password.
 /// Valid only for accounts in the forced-rotation list (needsPasswordChange == YES).
-/// Used during first-run bootstrap when the user cannot know the randomly-generated
-/// initial password.  Clears the rotation flag on success.
+/// Used during first-run bootstrap to rotate the seeded default password.
+/// Clears the rotation flag on success.
 - (BOOL)forceChangePasswordForUserID:(NSString *)userID
                          newPassword:(NSString *)newPassword
                                error:(NSError **)error;
@@ -70,12 +70,12 @@ typedef NS_ENUM(NSInteger, CPAuthError) {
 - (BOOL)validatePassword:(NSString *)password error:(NSError **)error;
 
 /// Create default admin/technician/finance accounts if none exist. Returns YES if seeded.
-/// On first run the generated credentials are stored in pendingBootstrapCredentials for
-/// one-time display by AppDelegate; they are never written to logs.
+/// On first run the seeded default credentials are stored in pendingBootstrapCredentials
+/// for one-time display by AppDelegate; they are never written to logs.
 - (BOOL)seedDefaultUsersIfNeeded;
 
 /// Same as seedDefaultUsersIfNeeded but uses a caller-supplied password for all seeded
-/// accounts instead of generating random ones. Intended for deterministic test setup only.
+/// accounts. Intended for deterministic test setup only.
 /// Must not be called in production code paths.
 - (BOOL)seedDefaultUsersWithPassword:(NSString *)password;
 

@@ -24,6 +24,10 @@ static const NSInteger kMaxFailedAttempts       = 5;
 static const NSTimeInterval kLockoutDuration    = 15.0 * 60.0; // 15 minutes
 static const NSUInteger kMinPasswordLength      = 10;
 static const NSUInteger kSaltByteCount          = 16;
+// Hardcoded bootstrap credentials for first-run seeded accounts.
+static NSString * const kDefaultAdminPassword   = @"Admin1234Pass";
+static NSString * const kDefaultTechPassword    = @"Tech1234Pass";
+static NSString * const kDefaultFinancePassword = @"Fin1234Pass";
 
 // ---------------------------------------------------------------------------
 // Private interface
@@ -651,35 +655,6 @@ static const NSUInteger kSaltByteCount          = 16;
 
 #pragma mark - Seeding Default Users
 
-/// Generates a cryptographically random 16-character password that satisfies
-/// the app password policy (≥10 chars, ≥1 digit).  The last character is
-/// always a decimal digit.  This password is NEVER stored in source code.
-- (NSString *)generateBootstrapPassword {
-    static const char kLetters[] =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    static const char kDigits[]  = "0123456789";
-    static const NSUInteger kLetterCount = sizeof(kLetters) - 1;
-    static const NSUInteger kDigitCount  = sizeof(kDigits)  - 1;
-    static const NSUInteger kPasswordLen = 16;
-
-    uint8_t randomBytes[kPasswordLen];
-    if (SecRandomCopyBytes(kSecRandomDefault, kPasswordLen, randomBytes) != errSecSuccess) {
-        for (NSUInteger i = 0; i < kPasswordLen; i++) {
-            randomBytes[i] = (uint8_t)arc4random_uniform(256);
-        }
-    }
-
-    char buf[kPasswordLen + 1];
-    buf[kPasswordLen] = '\0';
-    for (NSUInteger i = 0; i < kPasswordLen - 1; i++) {
-        buf[i] = kLetters[randomBytes[i] % kLetterCount];
-    }
-    // Guarantee the last character is a digit so validatePassword: always passes.
-    buf[kPasswordLen - 1] = kDigits[randomBytes[kPasswordLen - 1] % kDigitCount];
-
-    return [NSString stringWithUTF8String:buf];
-}
-
 - (BOOL)seedDefaultUsersIfNeeded {
     __block BOOL seeded = NO;
 
@@ -706,13 +681,12 @@ static const NSUInteger kSaltByteCount          = 16;
                                                permissions:[self financeApproverPermissions]
                                                  inContext:context];
 
-        // Generate one-time bootstrap passwords. These are random and NEVER
-        // stored in source code or written to any log. They are surfaced once
-        // via an in-app alert (pendingBootstrapCredentials) so the operator can
-        // note them; the alert is shown by AppDelegate after the window is ready.
-        NSString *adminPass = [self generateBootstrapPassword];
-        NSString *techPass  = [self generateBootstrapPassword];
-        NSString *finPass   = [self generateBootstrapPassword];
+        // Use fixed first-run bootstrap passwords for seeded accounts.
+        // These values are intentionally deterministic and surfaced in-app once
+        // via AppDelegate so operators can copy them before first login.
+        NSString *adminPass = kDefaultAdminPassword;
+        NSString *techPass  = kDefaultTechPassword;
+        NSString *finPass   = kDefaultFinancePassword;
 
         NSString *adminUUID = [self createDefaultUserWithUsername:@"admin"
                                                          password:adminPass
